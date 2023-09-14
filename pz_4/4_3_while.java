@@ -6,10 +6,11 @@ public class Main {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int count = 0;
-        for (int i = a; i <= b; i++) {
-            if (i % 3 == 0 && i % 5 != 0) {
+        while (a <= b) {
+            if (a % 3 == 0 && a % 5 != 0) {
                 count++;
             }
+            a++;
         }
         System.out.println(count);
     }
