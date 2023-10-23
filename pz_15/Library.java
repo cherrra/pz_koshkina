@@ -1,13 +1,13 @@
 public class Library extends Building implements SocialHouse {
     int count_books;
     int count_employee;
-    String named_after;
+    String name_owner;
 
-    Library(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_books, int count_employee, String named_after) {
-        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural = isCultural;
+    Library(String name, String adres, int yearBuilt, String arcName, boolean isCulture, int count_books, int count_employee, String name_owner) {
+        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.arcName = arcName; this.isCulture = isCulture;
         this.count_books = count_books;
-        this. count_employee = count_employee;
-        this.named_after = named_after;
+        this.count_employee = count_employee;
+        this.name_owner = name_owner;
     }
 
     //инкапсуляция
@@ -20,37 +20,37 @@ public class Library extends Building implements SocialHouse {
         this.count_books = count_books;
     }
 
-    int getCount_employee() {
+    int getСount_employee() {
         return this.count_employee;
     }
 
     void setCount_employee(int count_employee) {
-        this.count_employee= count_employee;
+        this.count_employee = count_employee;
     }
 
-    String getNamed_after() {
-        return this.named_after;
+    String getName_owner() {
+        return this.name_owner;
     }
 
-    void setNamed_after(String named_after) {
-        this.named_after = named_after;
+    void setName_owner(String name_owner) {
+        this.name_owner = name_owner;
     }
 
     void display() {
         System.out.println("Библиотека");
     }
 
-    void showArch() {
-        System.out.println("Здание спроектировал: " + architectName);
+    void showYear() {
+        System.out.println("Здание было построено в " + yearBuilt);
     }
 
-    void showtoEmpl() {
-        System.out.println("Сотрудников в библиотеке: " + this.count_employee;
+    void showEmpl() {
+        System.out.println("Кол-во сотрудников: " + this.count_employee);
     }
 
     @Override
     public String toString() {
-        return this.count_books + " " + this.count_employee + " " + this.named_after;
+        return this.count_books + " " + this.count_employee + " " + this.name_owner;
     }
 
     public void information() {
@@ -62,6 +62,6 @@ public class Library extends Building implements SocialHouse {
     }
 
     public void year_house() {
-        System.out.println("Здание построено в: " + this.yearBuilt);
+        System.out.println("Здание было построено в: " + this.yearBuilt);
     }
 }
