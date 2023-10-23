@@ -1,48 +1,17 @@
 public class ShoppingCenter extends Building implements SocialHouse {
     int count_shops;
-    int year_repair;
-    boolean hasFoodCourt;
+    boolean hasFood;
+    String name_owner;
 
 
-    ShoppingCenter(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_shops, int year_repair, boolean hasFoodCourt) {
-        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural() = isCultural;
+    ShoppingCenter(String name, String adres, int yearBuilt, String arcName, boolean isCulture, int count_shops, boolean hasFood, String name_owner) {
+        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.arcName = arcName; this.isCulture = isCulture;
         this.count_shops = count_shops;
-        this.year_repair = year_repair;
-        this.hasFoodCourt = hasFoodCourt;
+        this.hasFood = hasFood;
+        this.name_owner = name_owner;
     }
 
-    @Override
-    public String toString() {
-        return this.count_shops + " " + this.year_repair + " " + this.hasFoodCourt;
-    }
-
-
-    void display() {
-        System.out.println("Торговый центр");
-    }
-
-    void showArch() {
-        System.out.println("Здание спроектировал: " + architectName);
-    }
-
-    void showtoRepair() {
-        System.out.println("Ремонт в здании был в " + this.year_repair);
-    }
-
-    public void information() {
-        System.out.println("Это Торговый Центр");
-    }
-
-    public void count_any() {
-        System.out.println("Количество магазинов: " + this.count_shops);
-    }
-
-    public void year_house() {
-        System.out.println("Здание построено в: " + this.yearBuilt);
-    }
-
-
-    //Инкапсуляция.
+    //инкапсуляция
 
     int getCount_books() {
         return this.count_shops;
@@ -52,19 +21,49 @@ public class ShoppingCenter extends Building implements SocialHouse {
         this.count_shops = count_shops;
     }
 
-    int getYear_repair() {
-        return this.year_repair;
+    boolean getHasFood() {
+        return this.hasFood;
     }
 
-    void setYear_repair(int year_repair) {
-        this.year_repair = year_repair;
+    void setHasFood(boolean hasFood) {
+        this.hasFood = hasFood;
     }
 
-    String getHasFoodCourt() {
-        return this.hasFoodCourt;
+    String getName_owner() {
+        return this.name_owner;
     }
 
-    void setHasFoodCourt(boolean hasFoodCourt) {
-        this.hasFoodCourt = hasFoodCourt;
+    void setName_owner(String name_owner) {
+        this.name_owner = name_owner;
+    }
+
+    @Override
+    public String toString() {
+        return this.count_shops + " " + this.hasFood + " " + this.name_owner;
+    }
+
+
+    void display() {
+        System.out.println("Торговый центр");
+    }
+
+    void showTodata() {
+        System.out.println("Здание было построено в " + yearBuilt);
+    }
+
+    void showtoRepair() {
+        System.out.println("Наличие фудкорта " + this.hasFood);
+    }
+
+    public void information() {
+        System.out.println("Это торговый центр");
+    }
+
+    public void count_any() {
+        System.out.println("Кол-во магазинов: " + this.count_shops);
+    }
+
+    public void year_house() {
+        System.out.println("Здание было построено в: " + this.yearBuilt);
     }
 }
