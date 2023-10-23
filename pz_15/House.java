@@ -1,56 +1,56 @@
 public class House extends Building implements LivingHouse {
-    int count_room;
-    boolean hasGarden;
     int count_resident;
+    int year_repair;
+    String name_owner;
 
-    House(String name, String adres, int yearBuilt, String architectName, boolean isCulture, int count_room, boolean hasGarden, int count_resident) {
-        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural() = isCultural;
-        this.count_room = count_room;
-        this.hasGarden = hasGarden;
+    House(String name, String adres, int yearBuilt, String arcName, boolean isCulture, int count_resident, int year_repair, String name_owner) {
+        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.arcName = arcName; this.isCulture = isCulture;
         this.count_resident = count_resident;
+        this.year_repair = year_repair;
+        this.name_owner = name_owner;
     }
 
     //инкапсуляция
 
-    int getCount_room() {
-        return this.count_room;
-    }
-
-    void setCount_room(int count_room) {
-        this.count_room = count_room;
-    }
-
-    int getHasGarden() {
-        return this.hasGarden = hasGarden;
-    }
-
-    void setHasGarden(int hasGarden) {
-        this.hasGarden = hasGarden;
-    }
-
-    String getCount_resident() {
+    int getCount_resident() {
         return this.count_resident;
     }
 
-    void setCount_resident(String count_resident) {
+    void setCount_resident(int count_resident) {
         this.count_resident = count_resident;
+    }
+
+    int getYear_repair() {
+        return this.year_repair;
+    }
+
+    void setYear_repair(int year_repair) {
+        this.year_repair = year_repair;
+    }
+
+    String getName_owner() {
+        return this.name_owner;
+    }
+
+    void setName_owner(String name_owner) {
+        this.name_owner = name_owner;
     }
 
     @Override
     public String toString() {
-        return this.count_room + " " + this.hasGarden + " " + this.count_resident;
+        return this.count_resident + " " + this.year_repair + " " + this.name_owner;
     }
 
     void display() {
         System.out.println("Дом");
     }
 
-    void showArch() {
-        System.out.println("Здание спроектировал: " + architectName);
+    void showTodata() {
+        System.out.println("Здание было построено в " + yearBuilt);
     }
 
-    void showRoom() {
-        System.out.println("Комнат в доме: " + this.count_room);
+    void showtoRepair() {
+        System.out.println("Ремонт в здании был проведён в " + this.year_repair);
     }
 
 
@@ -59,10 +59,10 @@ public class House extends Building implements LivingHouse {
     }
 
     public void count_any() {
-        System.out.println("Кол-во жителей: " + this.count_resident);
+        System.out.println("Количество жителей: " + this.count_resident);
     }
 
     public void year_house() {
-        System.out.println("Здание построено в: " + this.yearBuilt);
+        System.out.println("Количество лет зданию: " + this.yearBuilt);
     }
 }
