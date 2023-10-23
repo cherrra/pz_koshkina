@@ -1,13 +1,13 @@
 public class University extends Building implements SocialHouse {
     int count_students;
     int count_prep;
-    String name_city;
+    String name_owner;
 
-    University(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_students, int count_prep, String name_city) {
-        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural = isCultural;
+    University(String name, String adres, int yearBuilt, String arcName, boolean isCulture, int count_students, int count_prep, String name_owner) {
+        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.arcName = arcName; this.isCulture = isCulture;
         this.count_students = count_students;
         this.count_prep = count_prep;
-        this.name_city = name_city;
+        this.name_owner = name_owner;
     }
 
     //инкапсуляция
@@ -28,28 +28,28 @@ public class University extends Building implements SocialHouse {
         this.count_prep = count_prep;
     }
 
-    String getName_city() {
-        return this.name_city;
+    String getName_owner() {
+        return this.name_owner;
     }
 
-    void setName_city(String name_city) {
-        this.name_city = name_city;
+    void setName_owner(String name_owner) {
+        this.name_owner = name_owner;
     }
 
     @Override
     public String toString() {
-        return this.count_students + " " + this.count_prep + " " + this.name_city;
+        return this.count_students + " " + this.count_prep + " " + this.name_owner;
     }
 
     void display() {
         System.out.println("Университет");
     }
 
-    void showArch() {
-        System.out.println("Здание спроектировал " + architectName);
+    void showTodata() {
+        System.out.println("Здание было построено в " + yearBuilt);
     }
 
-    void showPrep() {
+    void showtoPrep() {
         System.out.println("Кол-во преподавателей: " + this.count_prep);
     }
 
@@ -63,7 +63,6 @@ public class University extends Building implements SocialHouse {
     }
 
     public void year_house() {
-        System.out.println("Здание построено в: " + this.yearBuilt());
+        System.out.println("Здание было построено в: " + this.yearBuilt);
     }
-    
 }
