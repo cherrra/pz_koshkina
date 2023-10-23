@@ -1,44 +1,44 @@
 public class PoliceDepartament extends Building implements SocialHouse {
     int count_sotryd;
-    int year_repair;
-    int numberOffice;
+    int number_office;
+    String name_owner;
 
-    PoliceDepartament(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_sotryd, int year_repair, int numberOffice) {
-        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural = isCultural;
+    PoliceDepartament(String name, String adres, int yearBuilt, String arcName, boolean isCulture, int count_sotryd, int number_office, String name_owner) {
+        this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.arcName = arcName; this.isCulture = isCulture;
         this.count_sotryd = count_sotryd;
-        this.year_repair = year_repair;
-        this.numberOffice = numberOffice;
+        this.number_office = number_office;
+        this.name_owner = name_owner;
     }
 
     //инкапсуляция
 
-    int getCount_books() {
+    int getCount_sotryd() {
         return this.count_sotryd;
     }
 
-    void setCount_books(int count_sotryd) {
+    void setCount_sotryd(int count_sotryd) {
         this.count_sotryd = count_sotryd;
     }
 
-    int getYear_repair() {
-        return this.year_repair;
+    int getNumber_office() {
+        return this.number_office;
     }
 
-    void setYear_repair(int year_repair) {
-        this.year_repair = year_repair;
+    void setNumber_office(int number_office) {
+        this.number_office = number_office;
     }
 
-    String getNumberOffice() {
-        return this.numberOffice;
+    String getName_owner() {
+        return this.name_owner;
     }
 
-    void setNumberOffice(int numberOffice) {
-        this.numberOffice = numberOffice;
+    void setName_owner(String name_owner) {
+        this.name_owner = name_owner;
     }
 
     @Override
     public String toString() {
-        return this.count_sotryd + " " + this.year_repair + " " + this.numberOffice;
+        return this.count_sotryd + " " + this.number_office + " " + this.name_owner;
     }
 
 
@@ -46,17 +46,17 @@ public class PoliceDepartament extends Building implements SocialHouse {
         System.out.println("Полицейский участок");
     }
 
-    void showArch() {
-        System.out.println("Здание спроектировал " + architectName);
+    void showTodata() {
+        System.out.println("Здание было построено в " + yearBuilt);
     }
 
-    void showOffice() {
-        System.out.println("Номер офиса"  + this.numberOffice);
+    void showNumber() {
+        System.out.println("Номер офиса: " + this.number_office);
     }
 
 
     public void information() {
-        System.out.println("Это полицейский участок");
+        System.out.println("Это Полицейский участок");
     }
 
     public void count_any() {
@@ -64,8 +64,6 @@ public class PoliceDepartament extends Building implements SocialHouse {
     }
 
     public void year_house() {
-        System.out.println("Здание построено в: " + this.yearBuilt);
+        System.out.println("Здание было построено в: " + this.yearBuilt);
     }
-
-
 }
