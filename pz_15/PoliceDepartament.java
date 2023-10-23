@@ -3,7 +3,7 @@ public class PoliceDepartament extends Building implements SocialHouse {
     int year_repair;
     int numberOffice;
 
-    PoliceDepartament(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_sotryd, int year_repair, String name_city) {
+    PoliceDepartament(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_sotryd, int year_repair, int numberOffice) {
         this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural = isCultural;
         this.count_sotryd = count_sotryd;
         this.year_repair = year_repair;
