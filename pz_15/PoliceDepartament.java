@@ -1,13 +1,13 @@
 public class PoliceDepartament extends Building implements SocialHouse {
     int count_sotryd;
     int year_repair;
-    String name_city;
+    int numberOffice;
 
     PoliceDepartament(String name, String adres, int yearBuilt, String architectName, boolean isCultural, int count_sotryd, int year_repair, String name_city) {
         this.name = name; this.adres = adres; this.yearBuilt = yearBuilt; this.architectName = architectName; this.isCultural = isCultural;
         this.count_sotryd = count_sotryd;
         this.year_repair = year_repair;
-        this.name_city = name_city;
+        this.numberOffice = numberOffice;
     }
 
     //инкапсуляция
@@ -28,17 +28,17 @@ public class PoliceDepartament extends Building implements SocialHouse {
         this.year_repair = year_repair;
     }
 
-    String getName_city() {
-        return this.name_city;
+    String getNumberOffice() {
+        return this.numberOffice;
     }
 
-    void setName_city(String name_city) {
-        this.name_city = name_city;
+    void setNumberOffice(int numberOffice) {
+        this.numberOffice = numberOffice;
     }
 
     @Override
     public String toString() {
-        return this.count_sotryd + " " + this.year_repair + " " + this.name_city;
+        return this.count_sotryd + " " + this.year_repair + " " + this.numberOffice;
     }
 
 
@@ -50,8 +50,8 @@ public class PoliceDepartament extends Building implements SocialHouse {
         System.out.println("Здание спроектировал " + architectName);
     }
 
-    void showtoRepair() {
-        System.out.println("Ремонт в здании был проведён в " + this.year_repair);
+    void showOffice() {
+        System.out.println("Номер офиса"  + this.numberOffice);
     }
 
 
