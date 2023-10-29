@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        double a;
+        double b;
+
+        String[] parts = input.split(" ");
+
+        if (parts.length != 3) {
+            System.out.println("Error! Invalid input");
+            return;
+        }
+
+        try {
+            a = Double.parseDouble(parts[0]);
+            b = Double.parseDouble(parts[2]);
+        } catch (NumberFormatException e) {
+            System.out.println("Error! Not number");
+            return;
+        }
+
+        String operation = parts[1];
+        double result = 0;
+
+        if (operation.equals("+")) {
+            result = a + b;
+        } else if (operation.equals("-")) {
+            result = a - b;
+        } else if (operation.equals("*")) {
+            result = a * b;
+        } else if (operation.equals("/")) {
+            if (b == 0) {
+                System.out.println("Error! Division by zero");
+                return;
+            }
+            result = a / b;
+        } else {
+            System.out.println("Operation Error!");
+            return;
+        }
+
+        System.out.println(result);
+    }
+}
