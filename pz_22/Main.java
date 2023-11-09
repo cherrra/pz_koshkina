@@ -6,9 +6,10 @@ import javax.imageio.ImageIO;
 import java.net.URL;
 
 public class Main extends Canvas {
-    static int width = 750, height = 750;
+    static int width = 750, height = 750; //размеры
 
     public static void main(String[] args) throws IOException {
+        //создаем и настраиваем окошко
         JFrame frame = new JFrame();
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -18,6 +19,7 @@ public class Main extends Canvas {
         frame.getContentPane().setLayout(null);
         frame.getContentPane().setBackground(Color.BLACK);
 
+        //добавляем картинку и делаем так чтобы она появилась
         BufferedImage screamHead = ImageIO.read
                 (new URL("https://www.dvdland.com.au/product_images/p/196/dvd_7__69128_std.jpg"));
         int screamHeadWidth = screamHead.getWidth();
@@ -25,9 +27,10 @@ public class Main extends Canvas {
         JLabel wIcon = new JLabel(new ImageIcon(screamHead));
         int startX = (int) (Math.random() * (width - screamHeadWidth)),
                 startY = (int) (Math.random() * (height - screamHeadHight));
-        wIcon.setBounds(startX, startY, screamHeadWidth, screamHeadHight);
-        frame.add(wIcon);
+        wIcon.setBounds(startX, startY, screamHeadWidth, screamHeadHight); //начальное положение картинки
+        frame.add(wIcon); //картинка на фон
 
+        //бесконечный цикл чтобы картинка двигалась
         while (true) {
             int newX = (int) (Math.random() * (width - screamHeadWidth)),
                     newY = (int) (Math.random() * (height - screamHeadHight));
@@ -47,7 +50,7 @@ public class Main extends Canvas {
         }
 
     }
-
+//алгоритм Брезенхэма для подсчета координат
     public static int[][] drawBresenhamLine(int xstart, int ystart, int xend, int yend) {
         int x, y, dx, dy, incx, incy, pdx, pdy, es, el, err;
 
@@ -93,8 +96,10 @@ public class Main extends Canvas {
         }
         return a;
     }
+//в методе Брезенхэма нарисовали все 9 видов отрезков
 
     private static int sign(int x) {
         return (x > 0 ? 1 : (x < 0) ? -1 : 0);
+        //возвращает 0, если аргумент x: -1, если x < 0 и 1, если x > 0
     }
 }
