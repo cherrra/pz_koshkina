@@ -8,6 +8,26 @@ class MusicConcert extends Concert {
         this.genre = genre;
     }
 
+    public void setPerformer(String performer) {
+        this.performer = performer;
+    }
+
+    public String getPerformer() {
+        return ("Noize MC");
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+    @Override
+    public void buyTicket() {
+        System.out.println("Билет на концерт купил: " + name);
+    }
+
     @Override
     public void getInfo() {
         System.out.println("Концерт: " + name);
@@ -16,17 +36,5 @@ class MusicConcert extends Concert {
         System.out.println("Исполнитель: " + performer);
         System.out.println("Жанр: " + genre);
         System.out.println("Стоимость: " + ticketPrice);
-    }
-
-    public void setPerformer(String performer) {
-        this.performer = performer;
-    }
-
-    public String getPerformer() {
-        return ("Noize MC");
-    }
-    @Override
-    public void buyTicket() {
-        System.out.println("Билет на концерт купил: " + name);
     }
 }
