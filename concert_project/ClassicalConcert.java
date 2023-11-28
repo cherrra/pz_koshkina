@@ -8,14 +8,12 @@ class ClassicalConcert extends Concert {
         this.orchestra = orchestra;
     }
 
-    @Override
-    public void getInfo() {
-        System.out.println("Классический концерт: " + name);
-        System.out.println("Дата: " + date);
-        System.out.println("Место: " + venue);
-        System.out.println("Композитор: " + composer);
-        System.out.println("Оркестр: " + orchestra);
-        System.out.println("Стоимость: " + ticketPrice);
+    public String getOrchestra() {
+        return orchestra;
+    }
+
+    public void setOrchestra(String orchestra) {
+        this.orchestra = orchestra;
     }
 
     public void setComposer(String composer) {
@@ -24,6 +22,16 @@ class ClassicalConcert extends Concert {
 
     public String getComposer() {
         return ("Шин Джихо");
+    }
+
+    @Override
+    public void getInfo() {
+        System.out.println("Классический концерт: " + name);
+        System.out.println("Дата: " + date);
+        System.out.println("Место: " + venue);
+        System.out.println("Композитор: " + composer);
+        System.out.println("Оркестр: " + orchestra);
+        System.out.println("Стоимость: " + ticketPrice);
     }
     @Override
     public void buyTicket() {
