@@ -7,6 +7,22 @@ class JazzFestival extends Concert implements Festival {
         this.musicians = musicians;
         this.vibe = vibe;
     }
+
+    public void setVibe(String vibe) {
+        this.vibe = vibe;
+    }
+
+    public String getVibe() {
+        return ("Free Jazz");
+    }
+
+    public void setMusicians(String[] musicians) {
+        this.musicians = musicians;
+    }
+
+    public String[] getMusicians() {
+        return musicians;
+    }
     @Override
     public void getInfo() {
         System.out.println("Джаз-фестиваль: " + name);
@@ -24,19 +40,11 @@ class JazzFestival extends Concert implements Festival {
 
     @Override
     public void getLineUp() {
-        System.out.println("Состав участников фестиваля: " + String.join(", ", musicians));
+        System.out.println("Состав участников фестиваля: "  + String.join(", ", musicians));
     }
 
     @Override
     public void getAttractions() {
 
-    }
-
-    public void setVibe(String vibe) {
-        this.vibe = vibe;
-    }
-
-    public String getVibe() {
-        return ("Free Jazz");
     }
 }
