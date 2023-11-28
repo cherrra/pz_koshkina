@@ -9,6 +9,14 @@ class Ticket {
         this.price = price;
     }
 
+    public void setSeat(String seat) {
+        this.seat = seat;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
     public Concert getConcert() {
         return concert;
     }
