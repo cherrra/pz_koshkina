@@ -77,7 +77,7 @@ public class Main {
     private static String getConcertInfo(Concert concert, String selectedConcertType) {
         String additionalInfo = "";
         if (concert instanceof JazzFestival) {
-            additionalInfo = "Жанр: " + ((JazzFestival) concert).getVibe();
+            additionalInfo = "Стиль: " + ((JazzFestival) concert).getVibe();
         } else if (concert instanceof RockFestival) {
             additionalInfo = "Группы: " + ((RockFestival) concert).getBands();
         } else if (concert instanceof StandUpComedy) {
