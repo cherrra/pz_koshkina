@@ -8,6 +8,14 @@ class StandUpComedy extends Concert {
         this.humorType = humorType;
     }
 
+    public void setHumorType(String humorType) {
+        this.humorType = humorType;
+    }
+
+    public String getHumorType() {
+        return humorType;
+    }
+
     public void setСomedian(String comedian) {
         this.comedian = comedian;
     }
@@ -20,7 +28,7 @@ class StandUpComedy extends Concert {
         System.out.println("Стэнд-ап шоу: " + name);
         System.out.println("Дата: " + date);
         System.out.println("Место: " + venue);
-        System.out.println("Комик: ");
+        System.out.println("Комик: " + comedian);
     }
 
     @Override
