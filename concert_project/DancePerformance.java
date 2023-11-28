@@ -8,6 +8,22 @@ class DancePerformance extends Concert {
         this.danceStyle = danceStyle;
     }
 
+    public void setDanceStyle(String danceStyle) {
+        this.danceStyle = danceStyle;
+    }
+
+    public String getDanceStyle() {
+        return danceStyle;
+    }
+
+    public void setDancers(String dancers) {
+        this.dancers = dancers;
+    }
+
+    public String getDancers() {
+        return ("MegaDance");
+    }
+
     @Override
     public void getInfo() {
         System.out.println("Танцевальное выступление: " + name);
@@ -18,13 +34,6 @@ class DancePerformance extends Concert {
         System.out.println("Стоимость: " + ticketPrice);
     }
 
-    public void setDancers(String dancers) {
-        this.dancers = dancers;
-    }
-
-    public String getDancers() {
-        return ("MegaDance");
-    }
     @Override
     public void buyTicket() {
         System.out.println("Билет на танцевальное исполнение: " + name);
